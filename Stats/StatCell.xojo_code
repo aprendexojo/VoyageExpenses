@@ -18,14 +18,14 @@ Begin MobileTableCustomCell StatCell
       AccessibilityHint=   ""
       AccessibilityLabel=   ""
       Alignment       =   0
+      AutoLayout      =   DateLabel, 1, <Parent>, 1, False, +1.00, 4, 1, 60, , True
+      AutoLayout      =   DateLabel, 2, <Parent>, 2, False, +1.00, 4, 1, -*kStdGapCtlToViewH, , True
+      AutoLayout      =   DateLabel, 3, <Parent>, 3, False, +1.00, 4, 1, 52, , True
       AutoLayout      =   DateLabel, 8, , 0, False, +1.00, 4, 1, 30, , True
-      AutoLayout      =   DateLabel, 1, <Parent>, 1, False, +1.00, 4, 1, *kStdGapCtlToViewH, , True
-      AutoLayout      =   DateLabel, 3, <Parent>, 3, False, +1.00, 4, 1, *kStdGapCtlToViewV, , True
-      AutoLayout      =   DateLabel, 7, , 0, False, +1.00, 4, 1, 100, , True
       ControlCount    =   0
       Enabled         =   True
       Height          =   30
-      Left            =   20
+      Left            =   60
       LineBreakMode   =   0
       LockedInPosition=   False
       MaximumCharactersAllowed=   0
@@ -38,9 +38,9 @@ Begin MobileTableCustomCell StatCell
       TextFont        =   ""
       TextSize        =   11
       TintColor       =   &c000000
-      Top             =   20
+      Top             =   52
       Visible         =   True
-      Width           =   100
+      Width           =   412
       _ClosingFired   =   False
    End
    Begin MobileLabel PlaceName
@@ -48,14 +48,14 @@ Begin MobileTableCustomCell StatCell
       AccessibilityLabel=   ""
       Alignment       =   0
       AutoLayout      =   PlaceName, 8, , 0, False, +1.00, 4, 1, 30, , True
-      AutoLayout      =   PlaceName, 1, DateLabel, 2, False, +1.00, 4, 1, *kStdControlGapH, , True
-      AutoLayout      =   PlaceName, 2, TypeIcon, 1, False, +1.00, 4, 1, -*kStdControlGapH, , True
-      AutoLayout      =   PlaceName, 3, <Parent>, 3, False, +1.00, 4, 1, 20, , True
+      AutoLayout      =   PlaceName, 1, <Parent>, 1, False, +1.00, 4, 1, 60, , True
+      AutoLayout      =   PlaceName, 2, <Parent>, 2, False, +1.00, 4, 1, -*kStdGapCtlToViewH, , True
+      AutoLayout      =   PlaceName, 3, <Parent>, 3, False, +1.00, 4, 1, *kStdGapCtlToViewV, , True
       ControlCount    =   0
       Enabled         =   True
       Height          =   30
-      Left            =   128
-      LineBreakMode   =   0
+      Left            =   60
+      LineBreakMode   =   5
       LockedInPosition=   False
       MaximumCharactersAllowed=   0
       Scope           =   0
@@ -64,12 +64,12 @@ Begin MobileTableCustomCell StatCell
       SelectionStart  =   0
       Text            =   "Untitled"
       TextColor       =   &c000000
-      TextFont        =   ""
+      TextFont        =   "System		"
       TextSize        =   15
       TintColor       =   &c000000
       Top             =   20
       Visible         =   True
-      Width           =   246
+      Width           =   412
       _ClosingFired   =   False
    End
    Begin TripTypeIcon TypeIcon
@@ -97,14 +97,14 @@ Begin MobileTableCustomCell StatCell
       AccessibilityHint=   ""
       AccessibilityLabel=   ""
       Alignment       =   0
-      AutoLayout      =   Description, 8, , 0, False, +1.00, 4, 1, 55, , True
-      AutoLayout      =   Description, 1, <Parent>, 1, False, +1.00, 4, 1, *kStdGapCtlToViewH, , True
+      AutoLayout      =   Description, 1, <Parent>, 1, False, +1.00, 4, 1, 60, , True
       AutoLayout      =   Description, 2, <Parent>, 2, False, +1.00, 4, 1, -*kStdGapCtlToViewH, , True
-      AutoLayout      =   Description, 3, PlaceName, 4, False, +1.00, 4, 1, *kStdControlGapV, , True
+      AutoLayout      =   Description, 4, <Parent>, 4, False, +1.00, 4, 1, 0, , True
+      AutoLayout      =   Description, 8, , 0, False, +1.00, 4, 1, 55, , True
       ControlCount    =   0
       Enabled         =   True
       Height          =   55
-      Left            =   20
+      Left            =   60
       LineBreakMode   =   1
       LockedInPosition=   False
       MaximumCharactersAllowed=   0
@@ -115,11 +115,11 @@ Begin MobileTableCustomCell StatCell
       Text            =   ""
       TextColor       =   &c000000
       TextFont        =   ""
-      TextSize        =   0
+      TextSize        =   11
       TintColor       =   &c000000
-      Top             =   58
+      Top             =   78
       Visible         =   True
-      Width           =   452
+      Width           =   412
       _ClosingFired   =   False
    End
 End

@@ -42,17 +42,20 @@ Implements iOSMobileTableDataSource,iOSMobileTableDataSourceEditing
 		  // Part of the iOSMobileTableDataSource interface.
 		  var cell as mobileTableCellData
 		  
-		  var cachedLeissurePicture as Picture = Picture.SystemImage("sun.max", 40, picture.systemimageweights.regular, BlackAndWhite)
-		  var cachedWorkPicture as Picture = Picture.SystemImage("keyboard", 40, picture.systemimageweights.regular, BlackAndWhite)
+		  var cachedLeissurePicture as Picture = Picture.SystemImage("sun.max", 20, picture.systemimageweights.regular, BlackAndWhite)
+		  var cachedWorkPicture as Picture = Picture.SystemImage("keyboard", 20, picture.systemimageweights.regular, BlackAndWhite)
 		  
-		  
-		  
+		  var pinPicture as Picture = Picture.SystemImage("mappin.and.ellipse", 20, picture.systemimageweights.regular, BlackAndWhite)
+		  var currentPicture as Picture = Picture.SystemImage("figure.walk", 20, picture.systemimageweights.regular, BlackAndWhite)
 		  Select case section
 		  case 0
 		    
 		    cell = table.CreateCustomCell ( GetTypeInfo(BasicStatsCell) )
-		    
+		    cell.AccessoryType = MobileTableCellData.AccessoryTypes.Disclosure
 		    var cellControl as BasicStatsCell = BasicStatsCell( cell.Control )
+		    
+		    cell.Image = currentPicture
+		    
 		    cellControl.tag = CurrentTrip.Left
 		    cellControl.TripLabel.Text = CurrentTrip.Right
 		    Return cell
@@ -60,6 +63,7 @@ Implements iOSMobileTableDataSource,iOSMobileTableDataSourceEditing
 		  case 1
 		    
 		    cell = table.CreateCustomCell ( GetTypeInfo(StatCell) )
+		    cell.AccessoryType = MobileTableCellData.AccessoryTypes.Disclosure
 		    var trip as Dictionary = trips(row)
 		    var cellControl as StatCell = StatCell( cell.Control )
 		    cellControl.tag = trip.Lookup(ExpensesDB.kID, nil)
@@ -83,9 +87,11 @@ Implements iOSMobileTableDataSource,iOSMobileTableDataSourceEditing
 		    
 		    Select case tripType
 		    case 0
-		      cellcontrol.TypeIcon.icon = cachedLeissurePicture
+		      cell.Image = cachedLeissurePicture
+		      'cellcontrol.TypeIcon.icon = cachedLeissurePicture
 		    case 1
-		      cellcontrol.TypeIcon.icon = cachedWorkPicture
+		      cell.Image = cachedWorkPicture
+		      'cellcontrol.TypeIcon.icon = cachedWorkPicture
 		    End Select
 		    
 		    cellControl.Description.Text = trip.Lookup(expensesdb.kDescription, "")
@@ -95,6 +101,8 @@ Implements iOSMobileTableDataSource,iOSMobileTableDataSourceEditing
 		  case 2 
 		    
 		    cell = table.CreateCustomCell ( GetTypeInfo(BasicStatsCell) )
+		    cell.AccessoryType = MobileTableCellData.AccessoryTypes.Disclosure
+		    cell.Image = pinPicture
 		    
 		    var cellControl as BasicStatsCell = BasicStatsCell( cell.Control )
 		    cellControl.tag = places(row).Left

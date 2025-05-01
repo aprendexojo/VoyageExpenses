@@ -146,7 +146,7 @@ End
 #tag Events VersionField
 	#tag Event
 		Sub Opening()
-		  me.Text = app.Version
+		  me.Text = app.Version + "(" + app.NonReleaseVersion.ToString + ")"
 		End Sub
 	#tag EndEvent
 #tag EndEvents

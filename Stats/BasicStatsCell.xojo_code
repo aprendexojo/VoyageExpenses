@@ -20,13 +20,13 @@ Begin MobileTableCustomCell BasicStatsCell
       Alignment       =   0
       AutoLayout      =   TripLabel, 4, <Parent>, 4, False, +1.00, 4, 1, -4, , True
       AutoLayout      =   TripLabel, 8, , 0, False, +1.00, 4, 1, 30, , True
-      AutoLayout      =   TripLabel, 1, <Parent>, 1, False, +1.00, 4, 1, *kStdGapCtlToViewH, , True
+      AutoLayout      =   TripLabel, 1, <Parent>, 1, False, +1.00, 4, 1, 60, , True
       AutoLayout      =   TripLabel, 2, <Parent>, 2, False, +1.00, 4, 1, -*kStdGapCtlToViewH, , True
       AutoLayout      =   TripLabel, 3, <Parent>, 3, False, +1.00, 4, 1, 4, , True
       ControlCount    =   0
       Enabled         =   True
       Height          =   30
-      Left            =   20
+      Left            =   60
       LineBreakMode   =   0
       LockedInPosition=   False
       MaximumCharactersAllowed=   0
@@ -36,12 +36,12 @@ Begin MobileTableCustomCell BasicStatsCell
       SelectionStart  =   0
       Text            =   "Untitled"
       TextColor       =   &c000000
-      TextFont        =   ""
+      TextFont        =   "System		"
       TextSize        =   0
       TintColor       =   &c000000
       Top             =   4
       Visible         =   True
-      Width           =   280
+      Width           =   240
       _ClosingFired   =   False
    End
 End
