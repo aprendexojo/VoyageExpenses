@@ -79,7 +79,7 @@ End
 	#tag Event
 		Sub ToolbarButtonPressed(button As MobileToolbarButton)
 		  if button.Type = MobileToolbarButton.Types.add then
-		    iOSAlert.textInput(self, "New Category", "Type the name of the new Category", AddressOf table1.addcategory, "Cancel", "Ok")
+		    iOSAlert.textInput(self, "New Category", "Type the name of the new Category", AddressOf table1.addcategory, "Cancel", "Ok", "", "New Category name")
 		  end if
 		End Sub
 	#tag EndEvent

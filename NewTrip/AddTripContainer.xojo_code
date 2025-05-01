@@ -30,7 +30,7 @@ Begin MobileContainer AddTripContainer
       Height          =   130
       Left            =   0
       LockedInPosition=   False
-      RowType         =   1
+      RowSize         =   "PlaceTable.RowType.Regular"
       Scope           =   0
       SectionCount    =   0
       TintColor       =   &c000000
@@ -100,7 +100,7 @@ Begin MobileContainer AddTripContainer
       SelectedText    =   ""
       SelectionLength =   0
       SelectionStart  =   0
-      Text            =   "Description of the Trip."
+      Text            =   "Description for the Leisure Trip."
       TextColor       =   &c000000
       TextFont        =   ""
       TextSize        =   0
@@ -177,6 +177,17 @@ End
 		Sub Opening()
 		  me.SegmentAt(0).Icon = Picture.SystemImage("sun.max", 24)
 		  me.SegmentAt(1).Icon = Picture.SystemImage("keyboard", 24)
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub Pressed(segmentedIndex As Integer)
+		  Select case segmentedIndex
+		    
+		  case 0
+		    DescriptionField.Text = "Description for the Leisure Trip."
+		  case 1
+		    DescriptionField.Text = "Description for the Work Trip."
+		  End Select
 		End Sub
 	#tag EndEvent
 #tag EndEvents

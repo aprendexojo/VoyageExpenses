@@ -27,5 +27,10 @@
 				Target = 1752111103
 				Icon = 0
 			End ScreenContent
+			Begin ScreenContent
+				ItemName = More
+				Target = 287733759
+				Icon = 0
+			End ScreenContent
 	End ScreenContent
 #tag EndIOSLayout

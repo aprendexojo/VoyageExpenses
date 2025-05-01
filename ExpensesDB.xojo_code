@@ -319,6 +319,25 @@ Inherits SqliteDatabase
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
+		Function GetDatabaseVersion() As String
+		  var s as String
+		  
+		  if isConnected then
+		    try
+		      var rs as RowSet = me.SelectSQL("select version from metadata")
+		      if rs <> nil and rs.RowCount <> 0 then
+		        s = rs.Column("version").StringValue
+		      end if
+		    Catch e as DatabaseException
+		      
+		    end try
+		  end if
+		  
+		  Return s
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
 		Function GetExpensesForPlace(placeName as String) As Dictionary()
 		  var expenses() as Dictionary
 		  

@@ -204,6 +204,7 @@ End
 		  bar.IconAt(1) = Picture.SystemImage("globe.europe.africa", 24)
 		  bar.IconAt(2) = Picture.SystemImage("tag", 24)
 		  bar.IconAt(3) = Picture.SystemImage("chart.pie", 24)
+		  bar.IconAt(4) = Picture.SystemImage("ellipsis", 24)
 		  
 		  If location1.AuthorizationState = MobileLocation.AuthorizationStates.AuthorizedAppInUse Then
 		    // we've got our requested authorization state, start getting LocationChanged events
