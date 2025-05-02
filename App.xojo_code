@@ -58,7 +58,7 @@ Inherits MobileApplication
 	#tag Event
 		Sub Opening()
 		  expensesDatabase = new ExpensesDB
-		  
+		  CurrencySymbol = locale.Current.CurrencySymbol
 		End Sub
 	#tag EndEvent
 
@@ -71,6 +71,10 @@ Inherits MobileApplication
 
 	#tag Property, Flags = &h0
 		cachedColors As JSONItem
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		CurrencySymbol As String
 	#tag EndProperty
 
 	#tag Property, Flags = &h0

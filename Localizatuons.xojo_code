@@ -22,7 +22,7 @@ Protected Module Localizatuons
 
 	#tag Constant, Name = kAmountOrCategoryNotSet, Type = String, Dynamic = True, Default = \"Amount or Category has not been set for the expense", Scope = Public
 		#Tag Instance, Platform = Any, Language = Default, Definition  = \"Amount or Category has not been set for the expense"
-		#Tag Instance, Platform = Any, Language = Default, Definition  = \"Amount or Category has not been set for the expense"
+		#Tag Instance, Platform = Any, Language = en, Definition  = \"Amount or Category has not been set for the expense"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Cantidad o Categor\xC3\xADa no definida para el gasto"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Montant ou cat\xC3\xA9gorie non d\xC3\xA9fini pour la d\xC3\xA9pense"
 	#tag EndConstant
@@ -226,7 +226,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = Default, Definition  = \"Place"
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Place"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Lugar"
-		#Tag Instance, Platform = Any, Language = Default, Definition  = \"Lieu"
+		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Lieu"
 	#tag EndConstant
 
 	#tag Constant, Name = kPlaces, Type = String, Dynamic = True, Default = \"Places", Scope = Public
@@ -267,7 +267,7 @@ Protected Module Localizatuons
 	#tag Constant, Name = kTripExpenses, Type = String, Dynamic = True, Default = \"Trip Expenses", Scope = Public
 		#Tag Instance, Platform = Any, Language = Default, Definition  = \"Trip Expenses"
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Trip Expenses"
-		#Tag Instance, Platform = Any, Language = Default, Definition  = \"Gastos del Viaje"
+		#Tag Instance, Platform = Any, Language = es, Definition  = \"Gastos del Viaje"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Frais de Voyage"
 	#tag EndConstant
 

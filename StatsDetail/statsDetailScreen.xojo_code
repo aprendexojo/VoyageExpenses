@@ -319,7 +319,15 @@ End
 		    colors.add color.FromString( app.cachedColors.Value( item ) )
 		  next
 		  
-		  TotalExpensesLabel.Text = kTotalExpenses +  totalExpenses.ToString(locale.Current)
+		  var amountWithCurrency as String
+		  
+		  if app.CurrencySymbol = "$" then
+		    amountWithCurrency = "$ " + totalExpenses.ToString(locale.current)
+		  else
+		    amountWithCurrency = totalExpenses.ToString(locale.Current) + " " + app.CurrencySymbol
+		  end if
+		  
+		  TotalExpensesLabel.Text = kTotalExpenses +  amountWithCurrency
 		  
 		  StatsDetail.AddDatasets new ChartCircularDataset("", dataPoints, colors)
 		  StatsDetail.AddLabels labels

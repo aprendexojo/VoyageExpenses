@@ -1,6 +1,6 @@
 #tag Class
 Protected Class ExpensesDataSource
-Implements iOSMobileTableDataSource, iOSMobileTableDataSourceEditing
+Implements iOSMobileTableDataSource,iOSMobileTableDataSourceEditing
 	#tag Method, Flags = &h0
 		Function AllowRowEditing(table As iOSMobileTable, section As Integer, row As Integer) As Boolean
 		  // Part of the iOSMobileTableDataSourceEditing interface.
@@ -76,7 +76,14 @@ Implements iOSMobileTableDataSource, iOSMobileTableDataSourceEditing
 		  
 		  if row <= data.LastIndex then
 		    var d as Dictionary = data(row)
-		    cellControl.AmountLabel.Text = d.Lookup(ExpensesDB.kAmount, "")
+		    var amount as String
+		    if app.CurrencySymbol = "$" then
+		      amount = "$ " + d.Lookup(Expensesdb.kAmount, "")
+		    else
+		      amount = d.Lookup(Expensesdb.kAmount, "") + " " + app.CurrencySymbol
+		    end if
+		    
+		    cellControl.AmountLabel.Text = amount
 		    cellControl.DateLabel.Text = d.Lookup(expensesdb.kDate,"")
 		    cellControl.DescriptionLabel.Text = d.Lookup(Expensesdb.kDescription, "")
 		    cellControl.CategoryLabel.Text = d.Lookup(expensesdb.kCategory, "")

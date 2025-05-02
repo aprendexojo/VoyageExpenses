@@ -188,10 +188,17 @@ End
 		Sub Activated()
 		  TripValue = app.expensesDatabase.getCurrentTrip
 		  TripContainer1.Update(TripValue)
-		  
+		  var amount as String
 		  if TripValue <> nil then
 		    Table1.ReloadDataForTrip( TripValue.Left)
-		    TotalLabel.Text = table1.GetGrandTotal.ToString(locale.Current)
+		    
+		    if app.CurrencySymbol = "$" then
+		      amount = "$ " + table1.getGrandTotal.ToString(Locale.Current)
+		    else
+		      amount = table1.getGrandTotal.ToString(locale.Current) + " " + app.CurrencySymbol
+		    end if
+		    
+		    TotalLabel.Text = amount
 		  end if
 		End Sub
 	#tag EndEvent
