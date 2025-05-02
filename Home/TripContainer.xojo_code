@@ -23,8 +23,6 @@ Begin MobileContainer TripContainer
       Height          =   290
       Left            =   0
       LockedInPosition=   False
-      PanelIndex      =   -1
-      Parent          =   ""
       Scope           =   0
       TintColor       =   &c000000
       Top             =   0
@@ -38,13 +36,14 @@ Begin MobileContainer TripContainer
          AutoLayout      =   AddButton, 1, <Parent>, 1, False, +1.00, 4, 1, *kStdGapCtlToViewH, , True
          AutoLayout      =   AddButton, 2, <Parent>, 2, False, +1.00, 4, 1, -*kStdGapCtlToViewH, , True
          AutoLayout      =   AddButton, 3, TripLabel, 4, False, +1.00, 4, 1, 30, , True
-         Caption         =   "Add Trip"
+         Caption         =   "#kAddTrip"
          CaptionColor    =   &c007AFF00
          ControlCount    =   0
          Enabled         =   True
          Height          =   30
          Left            =   20
          LockedInPosition=   False
+         PanelIndex      =   0
          Parent          =   "Station1"
          Scope           =   0
          TextFont        =   ""
@@ -64,7 +63,7 @@ Begin MobileContainer TripContainer
       AutoLayout      =   CloseButton, 1, <Parent>, 1, False, +1.00, 4, 1, *kStdGapCtlToViewH, , True
       AutoLayout      =   CloseButton, 2, <Parent>, 2, False, +1.00, 4, 1, -*kStdGapCtlToViewH, , True
       AutoLayout      =   CloseButton, 3, <Parent>, 4, False, +1.00, 4, 1, -40, , True
-      Caption         =   "Close Trip"
+      Caption         =   "#kCloseTrip"
       CaptionColor    =   &cBB1C1F00
       ControlCount    =   0
       Enabled         =   True
@@ -99,7 +98,7 @@ Begin MobileContainer TripContainer
       SelectedText    =   ""
       SelectionLength =   0
       SelectionStart  =   0
-      Text            =   "No Current Trip"
+      Text            =   "#kNoTripAvailable"
       TextColor       =   &c000000
       TextFont        =   ""
       TextSize        =   40
@@ -162,13 +161,17 @@ End
 	#tag EndProperty
 
 
-	#tag Constant, Name = kAddTrip, Type = String, Dynamic = False, Default = \"Add Trip", Scope = Public
+	#tag Constant, Name = kAddTrip, Type = String, Dynamic = True, Default = \"Add Trip", Scope = Public
+		#Tag Instance, Platform = Any, Language = Default, Definition  = \"Add Trip"
+		#Tag Instance, Platform = Any, Language = en, Definition  = \"Add Trip"
+		#Tag Instance, Platform = Any, Language = es, Definition  = \"Nuevo Viaje"
+		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Nouveau Voyage"
 	#tag EndConstant
 
-	#tag Constant, Name = kNewExpense, Type = String, Dynamic = False, Default = \"New Expense", Scope = Public
-	#tag EndConstant
-
-	#tag Constant, Name = kNoTripAvailable, Type = String, Dynamic = False, Default = \"No Trip Available", Scope = Public
+	#tag Constant, Name = kNewExpense, Type = String, Dynamic = True, Default = \"New Expense", Scope = Public
+		#Tag Instance, Platform = Any, Language = Default, Definition  = \"New Expense"
+		#Tag Instance, Platform = Any, Language = en, Definition  = \"New Expense"
+		#Tag Instance, Platform = Any, Language = es, Definition  = \"Nuevo Gasto"
 	#tag EndConstant
 
 

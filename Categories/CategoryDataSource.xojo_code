@@ -1,6 +1,6 @@
 #tag Class
 Protected Class CategoryDataSource
-Implements iOSMobileTableDataSource, iOSMobileTableDataSourceEditing
+Implements iOSMobileTableDataSource,iOSMobileTableDataSourceEditing
 	#tag Method, Flags = &h0
 		Function AllowRowEditing(table As iOSMobileTable, section As Integer, row As Integer) As Boolean
 		  // Part of the iOSMobileTableDataSourceEditing interface.
@@ -37,7 +37,7 @@ Implements iOSMobileTableDataSource, iOSMobileTableDataSourceEditing
 		  var cell as mobileTableCellData
 		  
 		  cell = table.CreateCustomCell ( GetTypeInfo(CategoryCell) )
-		  'cell.AccessoryType = MobileTableCellData.AccessoryTypes.Info
+		  
 		  var cellControl as CategoryCell = CategoryCell( cell.Control )
 		  
 		  var textSize as integer
@@ -134,11 +134,11 @@ Implements iOSMobileTableDataSource, iOSMobileTableDataSourceEditing
 			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
-			Name="data()"
+			Name="rowSize"
 			Visible=false
 			Group="Behavior"
-			InitialValue=""
-			Type="Integer"
+			InitialValue="categoryTable.RowType.Small"
+			Type="CategoryTable.RowType"
 			EditorType=""
 		#tag EndViewProperty
 	#tag EndViewBehavior

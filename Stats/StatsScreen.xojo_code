@@ -12,7 +12,7 @@ Begin MobileScreen StatsScreen
    TabBarVisible   =   True
    TabIcon         =   0
    TintColor       =   &c000000
-   Title           =   "Stats"
+   Title           =   "#kStats"
    Top             =   0
    Begin MobileCanvas Canvas1
       AccessibilityHint=   ""

@@ -12,7 +12,7 @@ Begin MobileScreen LocationMapScreen
    TabBarVisible   =   True
    TabIcon         =   0
    TintColor       =   &c000000
-   Title           =   "Trip Locations"
+   Title           =   "#kTripLocations"
    Top             =   0
    Begin MobileMapViewer TripLocation
       AccessibilityHint=   ""

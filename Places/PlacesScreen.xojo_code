@@ -34,7 +34,7 @@ Begin MobileScreen PlacesScreen
       Height          =   612
       Left            =   0
       LockedInPosition=   False
-      RowType         =   0
+      RowSize         =   "PlaceTable.RowType.Regular"
       Scope           =   0
       SectionCount    =   0
       TintColor       =   &c000000
@@ -80,7 +80,7 @@ End
 	#tag Event
 		Sub ToolbarButtonPressed(button As MobileToolbarButton)
 		  if button.Type = MobileToolbarButton.Types.add then
-		    iOSAlert.textInput(self, "New Place", "Type the name of the new Place", AddressOf placesTable1.addPlace, "Cancel", "Ok","","New Place Name")
+		    iOSAlert.textInput(self, kNewPlace, kTypeTheNameOfTheNewPlace, AddressOf placesTable1.addPlace, kCancel, "Ok","",kNewPlaceName)
 		  end if
 		End Sub
 	#tag EndEvent

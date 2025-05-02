@@ -82,7 +82,7 @@ Begin MobileScreen HomeScreen
          SelectedText    =   ""
          SelectionLength =   0
          SelectionStart  =   0
-         Text            =   "Trip Expenses"
+         Text            =   "#kTripExpenses"
          TextColor       =   &c000000
          TextFont        =   ""
          TextSize        =   20
@@ -201,10 +201,15 @@ End
 		  me.TabIcon = Picture.SystemImage("Home", 24)
 		  var bar as iOSTabBar = me.ParentTabBar
 		  bar.IconAt(0) = Picture.SystemImage("house", 24)
+		  bar.CaptionAt(0) = kHome
 		  bar.IconAt(1) = Picture.SystemImage("globe.europe.africa", 24)
+		  bar.CaptionAt(1) = kPlaces
 		  bar.IconAt(2) = Picture.SystemImage("tag", 24)
+		  bar.CaptionAt(2) = kCategories
 		  bar.IconAt(3) = Picture.SystemImage("chart.pie", 24)
+		  bar.CaptionAt(3) = kStats
 		  bar.IconAt(4) = Picture.SystemImage("ellipsis", 24)
+		  bar.CaptionAt(4) = kMore
 		  
 		  If location1.AuthorizationState = MobileLocation.AuthorizationStates.AuthorizedAppInUse Then
 		    // we've got our requested authorization state, start getting LocationChanged events
@@ -300,7 +305,7 @@ End
 		  Const kFlagTag As String = "Duplicate"
 		  
 		  // Create the Delete button
-		  Actions(0) = New iOSMobileTableRowAction(iOSMobileTableRowAction.Styles.Normal, "Duplicate", kFlagTag)
+		  Actions(0) = New iOSMobileTableRowAction(iOSMobileTableRowAction.Styles.Normal, KDuplicate, kFlagTag)
 		  
 		  Return Actions
 		End Function
@@ -340,7 +345,7 @@ End
 		  Const kFlagTag As String = "Delete"
 		  
 		  // Create the Delete button
-		  Actions(0) = New iOSMobileTableRowAction(iOSMobileTableRowAction.Styles.Destructive, "Delete", kFlagTag)
+		  Actions(0) = New iOSMobileTableRowAction(iOSMobileTableRowAction.Styles.Destructive, kDelete, kFlagTag)
 		  
 		  Return Actions
 		End Function
@@ -350,16 +355,15 @@ End
 	#tag Event
 		Sub Opening()
 		  me.TextFont = new font("AvenirNextCondensed-DemiBold", 20)
-		  'me.TextColor = color.White
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events CloseTripConfirmation
 	#tag Event
 		Sub Opening()
-		  Var buttons() As String = Array("Cancel", "Close Trip")
-		  me.Title = "Close Current Trip"
-		  me.Message = "Do you want to close the current Trip?"
+		  Var buttons() As String = Array(kCancel, kCloseTrip)
+		  me.Title = kCloseCurrentTrip
+		  me.Message = kDoYouWantToCloseTheCurrentTrip
 		  me.Buttons = buttons
 		End Sub
 	#tag EndEvent

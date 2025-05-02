@@ -7,7 +7,7 @@ Inherits iOSMobileTable
 		  Const kFlagTag As String = "Delete"
 		  
 		  // Create the Delete button
-		  Actions(0) = New iOSMobileTableRowAction(iOSMobileTableRowAction.Styles.Destructive, "Delete", kFlagTag)
+		  Actions(0) = New iOSMobileTableRowAction(iOSMobileTableRowAction.Styles.Destructive, kDelete, kFlagTag)
 		  
 		  Return Actions
 		End Function
@@ -59,7 +59,7 @@ Inherits iOSMobileTable
 		    me.currentEditedRowID = cellcontrol.PlaceID
 		    me.currentEditedRowValue = cellcontrol.PlaceNameField.Text
 		    
-		    iOSAlert.textInput(screen, "Place", "Change the Place Name", AddressOf me.UpdatePlace, "Cancel", "Ok", cellcontrol.PlaceNameField.Text)
+		    iOSAlert.textInput(screen, kPlace, kChangeThePlaceName, AddressOf me.UpdatePlace, kCancel, "Ok", cellcontrol.PlaceNameField.Text)
 		  end if
 		End Sub
 	#tag EndMethod

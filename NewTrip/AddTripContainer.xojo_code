@@ -55,7 +55,7 @@ Begin MobileContainer AddTripContainer
       ControlCount    =   0
       Enabled         =   True
       Height          =   34
-      Hint            =   "Budget"
+      Hint            =   "#kBudget"
       InputType       =   8
       Left            =   20
       LockedInPosition=   False
@@ -100,7 +100,7 @@ Begin MobileContainer AddTripContainer
       SelectedText    =   ""
       SelectionLength =   0
       SelectionStart  =   0
-      Text            =   "Description for the Leisure Trip."
+      Text            =   "#kDescriptionForTheLeisureTrip"
       TextColor       =   &c000000
       TextFont        =   ""
       TextSize        =   0
@@ -155,7 +155,7 @@ End
 #tag Events PlaceTable1
 	#tag Event
 		Sub Opening()
-		  'me.RowSize = PlaceTable.RowType.Small
+		  
 		  me.AllowEditing = false
 		End Sub
 	#tag EndEvent
@@ -184,9 +184,9 @@ End
 		  Select case segmentedIndex
 		    
 		  case 0
-		    DescriptionField.Text = "Description for the Leisure Trip."
+		    DescriptionField.Text = kDescriptionForTheLeisureTrip
 		  case 1
-		    DescriptionField.Text = "Description for the Work Trip."
+		    DescriptionField.Text = kDescriptionForTheWorkTrip
 		  End Select
 		End Sub
 	#tag EndEvent

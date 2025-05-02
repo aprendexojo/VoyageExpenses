@@ -134,11 +134,11 @@ Implements iOSMobileTableDataSource,iOSMobileTableDataSourceEditing
 		  
 		  Select case section
 		  case 0
-		    Return "Current Trip"
+		    Return kCurrentTrip
 		  case 1
-		    Return "Trips"
+		    Return kTrips
 		  case 2
-		    Return "Places"
+		    Return kPlaces
 		  End Select
 		End Function
 	#tag EndMethod

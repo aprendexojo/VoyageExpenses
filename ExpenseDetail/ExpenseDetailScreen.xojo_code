@@ -12,7 +12,7 @@ Begin MobileScreen ExpenseDetailScreen
    TabBarVisible   =   True
    TabIcon         =   0
    TintColor       =   &c000000
-   Title           =   "Expense Detail"
+   Title           =   "#kExpenseDetail"
    Top             =   0
    Begin MobileScrollableArea ScrollableArea1
       AccessibilityHint=   ""

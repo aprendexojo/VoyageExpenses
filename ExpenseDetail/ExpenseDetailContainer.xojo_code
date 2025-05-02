@@ -25,7 +25,7 @@ Begin MobileContainer ExpenseDetailContainer
       ControlCount    =   0
       Enabled         =   True
       Height          =   34
-      Hint            =   "Expense amount"
+      Hint            =   "#kExpenseAmount"
       InputType       =   8
       Left            =   20
       LockedInPosition=   False
@@ -62,7 +62,7 @@ Begin MobileContainer ExpenseDetailContainer
       ControlCount    =   0
       Enabled         =   True
       Height          =   34
-      Hint            =   "Name"
+      Hint            =   "#kName"
       InputType       =   0
       Left            =   20
       LockedInPosition=   False
@@ -190,8 +190,6 @@ Begin MobileContainer ExpenseDetailContainer
       Left            =   20
       LockedInPosition=   False
       MaximumCharactersAllowed=   0
-      PanelIndex      =   -1
-      Parent          =   ""
       Password        =   False
       ReadOnly        =   True
       ReturnCaption   =   0
@@ -213,7 +211,11 @@ End
 #tag EndMobileContainer
 
 #tag WindowCode
-	#tag Constant, Name = kCurrentCategory, Type = String, Dynamic = False, Default = \"Current Category: ", Scope = Public
+	#tag Constant, Name = kCurrentCategory, Type = String, Dynamic = True, Default = \"Current Category: ", Scope = Public
+		#Tag Instance, Platform = Any, Language = Default, Definition  = \"Current Category: "
+		#Tag Instance, Platform = Any, Language = en, Definition  = \"Current Category: "
+		#Tag Instance, Platform = Any, Language = es, Definition  = \"Categor\xC3\xADa Actual: "
+		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Cat\xC3\xA9gorie Actuelle: "
 	#tag EndConstant
 
 

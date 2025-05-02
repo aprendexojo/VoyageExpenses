@@ -12,7 +12,7 @@ Begin MobileScreen NewTripScreen
    TabBarVisible   =   True
    TabIcon         =   0
    TintColor       =   &c000000
-   Title           =   "New Trip"
+   Title           =   "#kNewTrip"
    Top             =   0
    Begin AddTripContainer AddTripC
       AccessibilityHint=   ""
@@ -47,10 +47,6 @@ End
 		  var bt as new MobileToolbarButton(MobileToolbarButton.Types.add)
 		  bt.Enabled = False
 		  me.RightNavigationToolbar.AddButton bt
-		  
-		  'AddTripC = new AddTripContainer
-		  '
-		  'ScrollableArea1.Container = AddTripC
 		End Sub
 	#tag EndEvent
 

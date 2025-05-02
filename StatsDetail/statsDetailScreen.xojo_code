@@ -97,7 +97,7 @@ Begin MobileScreen statsDetailScreen
       Scope           =   0
       TextColor       =   &c000000
       TintColor       =   &c000000
-      Title           =   "Budget vs Current Expenses"
+      Title           =   "#kBudgetVsCurrentExpenses"
       TitleColor      =   &c000000
       TitleFontSize   =   0.0
       Top             =   358
@@ -168,11 +168,11 @@ End
 
 	#tag Event
 		Sub Opening()
-		  var bt as new MobileToolbarButton(MobileToolbarButton.Types.Custom,"", Picture.SystemImage("map", 20))
+		  var bt as new MobileToolbarButton(MobileToolbarButton.Types.Custom,"", Picture.SystemImage("map", 16))
 		  bt.Tag = kLocation
 		  me.RightNavigationToolbar.AddButton bt
 		  
-		  bt = new MobileToolbarButton(MobileToolbarButton.Types.Custom, "", Picture.SystemImage("paintpalette", 20))
+		  bt = new MobileToolbarButton(MobileToolbarButton.Types.Custom, "", Picture.SystemImage("paintpalette", 16))
 		  bt.Tag = kColors
 		  me.RightNavigationToolbar.AddButton bt
 		End Sub
@@ -319,7 +319,7 @@ End
 		    colors.add color.FromString( app.cachedColors.Value( item ) )
 		  next
 		  
-		  TotalExpensesLabel.Text ="Total Expenses: " +  totalExpenses.ToString(locale.Current)
+		  TotalExpensesLabel.Text = kTotalExpenses +  totalExpenses.ToString(locale.Current)
 		  
 		  StatsDetail.AddDatasets new ChartCircularDataset("", dataPoints, colors)
 		  StatsDetail.AddLabels labels
@@ -328,9 +328,9 @@ End
 		    StatsBudget.RemoveAllDatasets
 		    StatsBudget.AutoCalculateYAxis = false
 		    StatsBudget.TitleFontSize = 20
-		    var budgetds as new ChartLinearDataset("Budget", color.Red, true, Array(tripBudget) )
+		    var budgetds as new ChartLinearDataset( kBudget, color.Red, true, Array(tripBudget) )
 		    budgetds.ChartType = ChartLinearDataset.ChartTypes.Bar
-		    var total as new ChartLinearDataset("Total", color.Green, true, Array(totalExpenses) )
+		    var total as new ChartLinearDataset( kTotal, color.Green, true, Array(totalExpenses) )
 		    total.ChartType = ChartLinearDataset.ChartTypes.Bar
 		    
 		    StatsBudget.AddDatasets( budgetds, total )
@@ -528,6 +528,6 @@ End
 		Group="Behavior"
 		InitialValue=""
 		Type="String"
-		EditorType=""
+		EditorType="MultiLineEditor"
 	#tag EndViewProperty
 #tag EndViewBehavior

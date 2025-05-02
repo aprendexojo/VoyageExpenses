@@ -12,7 +12,7 @@ Begin MobileScreen NewExpenseScreen
    TabBarVisible   =   True
    TabIcon         =   0
    TintColor       =   &c000000
-   Title           =   "New Expense"
+   Title           =   "#kNewExpense"
    Top             =   0
    Begin MobileTextField AmountField
       AccessibilityHint=   ""
@@ -29,7 +29,7 @@ Begin MobileScreen NewExpenseScreen
       ControlCount    =   0
       Enabled         =   True
       Height          =   34
-      Hint            =   "Amount"
+      Hint            =   "#kAmount"
       InputType       =   8
       Left            =   20
       LockedInPosition=   False
@@ -103,7 +103,7 @@ Begin MobileScreen NewExpenseScreen
       SelectedText    =   ""
       SelectionLength =   0
       SelectionStart  =   0
-      Text            =   "Description for the expense."
+      Text            =   "#kDescriptionForTheExpense"
       TextColor       =   &c000000
       TextFont        =   ""
       TextSize        =   0
@@ -128,7 +128,7 @@ Begin MobileScreen NewExpenseScreen
       ControlCount    =   0
       Enabled         =   True
       Height          =   34
-      Hint            =   "Name"
+      Hint            =   "#kName"
       InputType       =   0
       Left            =   20
       LockedInPosition=   False
@@ -195,7 +195,7 @@ End
 		      self.Close
 		      
 		    else
-		      MessageBox("Amount or Category has not been set for the expense")
+		      MessageBox( kAmountOrCategoryNotSet )
 		    end if
 		  end if
 		End Sub
