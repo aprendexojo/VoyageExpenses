@@ -1,2 +1,2 @@
 # VoyageExpenses
-iOS app created in Xojo to track trip expenses
+iOS app created with Xojo to easily and quickly track trip and daily expenses
