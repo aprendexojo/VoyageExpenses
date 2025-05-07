@@ -157,6 +157,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = Default, Definition  = \"Home"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Inicio"
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Home"
+		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Initiale"
 	#tag EndConstant
 
 	#tag Constant, Name = kMore, Type = String, Dynamic = True, Default = \"More", Scope = Public

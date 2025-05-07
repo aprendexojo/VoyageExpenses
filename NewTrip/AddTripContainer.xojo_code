@@ -16,9 +16,9 @@ Begin MobileContainer AddTripContainer
       AllowEditing    =   True
       AllowRefresh    =   False
       AllowSearch     =   False
+      AutoLayout      =   PlaceTable1, 4, <Parent>, 4, False, +1.00, 4, 1, -*kStdGapCtlToViewV, , True
       AutoLayout      =   PlaceTable1, 1, <Parent>, 1, False, +1.00, 4, 1, 0, , True
       AutoLayout      =   PlaceTable1, 2, <Parent>, 2, False, +1.00, 4, 1, 0, , True
-      AutoLayout      =   PlaceTable1, 8, , 0, False, +1.00, 4, 1, 130, , True
       AutoLayout      =   PlaceTable1, 3, DescriptionField, 4, False, +1.00, 4, 1, *kStdControlGapV, , True
       ControlCount    =   0
       currentEditedRowID=   0
@@ -27,7 +27,7 @@ Begin MobileContainer AddTripContainer
       Enabled         =   True
       EstimatedRowHeight=   -1
       Format          =   0
-      Height          =   130
+      Height          =   162
       Left            =   0
       LockedInPosition=   False
       RowSize         =   "PlaceTable.RowType.Regular"
@@ -86,7 +86,7 @@ Begin MobileContainer AddTripContainer
       AutoCapitalizationType=   0
       AutoLayout      =   DescriptionField, 8, , 0, False, +1.00, 4, 1, 53, , True
       AutoLayout      =   DescriptionField, 1, <Parent>, 1, False, +1.00, 4, 1, *kStdGapCtlToViewH, , True
-      AutoLayout      =   DescriptionField, 2, PlaceTable1, 2, False, +1.00, 4, 1, -*kStdControlGapH, , True
+      AutoLayout      =   DescriptionField, 2, <Parent>, 2, False, +1.00, 4, 1, -*kStdGapCtlToViewH, , True
       AutoLayout      =   DescriptionField, 3, BudgetField, 4, False, +1.00, 4, 1, 20, , True
       BorderStyle     =   2
       ControlCount    =   0
@@ -107,7 +107,7 @@ Begin MobileContainer AddTripContainer
       TintColor       =   &c000000
       Top             =   91
       Visible         =   True
-      Width           =   292
+      Width           =   280
       _ClosingFired   =   False
    End
    Begin MobileSegmentedButton SegmentedButton1

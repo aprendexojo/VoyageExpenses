@@ -4,7 +4,7 @@ Begin MobileScreen HomeScreen
    Compatibility   =   ""
    ControlCount    =   0
    Device = 7
-   HasNavigationBar=   False
+   HasNavigationBar=   True
    LargeTitleDisplayMode=   2
    Left            =   0
    Orientation = 0
@@ -206,17 +206,19 @@ End
 	#tag Event
 		Sub Opening()
 		  me.TabIcon = Picture.SystemImage("Home", 24)
-		  var bar as iOSTabBar = me.ParentTabBar
-		  bar.IconAt(0) = Picture.SystemImage("house", 24)
-		  bar.CaptionAt(0) = kHome
-		  bar.IconAt(1) = Picture.SystemImage("globe.europe.africa", 24)
-		  bar.CaptionAt(1) = kPlaces
-		  bar.IconAt(2) = Picture.SystemImage("tag", 24)
-		  bar.CaptionAt(2) = kCategories
-		  bar.IconAt(3) = Picture.SystemImage("chart.pie", 24)
-		  bar.CaptionAt(3) = kStats
-		  bar.IconAt(4) = Picture.SystemImage("ellipsis", 24)
-		  bar.CaptionAt(4) = kMore
+		  if me.ParentTabBar <> nil then
+		    var bar as iOSTabBar = me.ParentTabBar
+		    bar.IconAt(0) = Picture.SystemImage("house", 24)
+		    bar.CaptionAt(0) = kHome
+		    bar.IconAt(1) = Picture.SystemImage("globe.europe.africa", 24)
+		    bar.CaptionAt(1) = kPlaces
+		    bar.IconAt(2) = Picture.SystemImage("tag", 24)
+		    bar.CaptionAt(2) = kCategories
+		    bar.IconAt(3) = Picture.SystemImage("chart.pie", 24)
+		    bar.CaptionAt(3) = kStats
+		    bar.IconAt(4) = Picture.SystemImage("ellipsis", 24)
+		    bar.CaptionAt(4) = kMore
+		  end if
 		  
 		  If location1.AuthorizationState = MobileLocation.AuthorizationStates.AuthorizedAppInUse Then
 		    // we've got our requested authorization state, start getting LocationChanged events

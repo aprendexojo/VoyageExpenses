@@ -56,9 +56,37 @@ Inherits MobileApplication
 	#tag EndEvent
 
 	#tag Event
+		Function HandleShortcut(identifier As String, userInfo As Dictionary) As Boolean
+		  'var id as integer = identifier.ToInteger
+		  '
+		  'Select case id
+		  '
+		  'case kNewExpense
+		  'var tripID as Pair = app.expensesDatabase.GetCurrentTrip
+		  '
+		  'if tripid <> nil then
+		  'var sc as new NewExpenseScreen(tripID.Left)
+		  'var home as new HomeScreen
+		  '
+		  'app.CurrentLayout.Content = home
+		  'sc.Show(home)
+		  'end if
+		  '
+		  'case kNewTrip
+		  '
+		  'End Select
+		End Function
+	#tag EndEvent
+
+	#tag Event
 		Sub Opening()
 		  expensesDatabase = new ExpensesDB
 		  CurrencySymbol = locale.Current.CurrencySymbol
+		  
+		  // Adding shortcuts to the app
+		  
+		  'me.AddShortcut(kNewExpense.ToString, "New Expense", "Adds a New Expense to Current Trip", "plus")
+		  'me.AddShortcut(kNewTrip.ToString, "New Trip","Creates a New Trip","figure.walk")
 		End Sub
 	#tag EndEvent
 
@@ -80,6 +108,13 @@ Inherits MobileApplication
 	#tag Property, Flags = &h0
 		expensesDatabase As ExpensesDB
 	#tag EndProperty
+
+
+	#tag Constant, Name = kNewExpense, Type = Double, Dynamic = False, Default = \"0", Scope = Public
+	#tag EndConstant
+
+	#tag Constant, Name = kNewTrip, Type = Double, Dynamic = False, Default = \"1", Scope = Public
+	#tag EndConstant
 
 
 	#tag ViewBehavior
