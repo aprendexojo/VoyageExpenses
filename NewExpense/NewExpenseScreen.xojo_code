@@ -22,8 +22,8 @@ Begin MobileScreen NewExpenseScreen
       AllowSpellChecking=   False
       AutoCapitalizationType=   0
       AutoLayout      =   AmountField, 8, , 0, False, +1.00, 4, 1, 34, , True
-      AutoLayout      =   AmountField, 1, <Parent>, 1, False, +1.00, 4, 1, *kStdGapCtlToViewH, , True
-      AutoLayout      =   AmountField, 2, <Parent>, 2, False, +1.00, 4, 1, -*kStdGapCtlToViewH, , True
+      AutoLayout      =   AmountField, 1, <Parent>, 1, False, +1.00, 4, 1, *kStdGapCtlToViewH, AmountLeft, True
+      AutoLayout      =   AmountField, 2, <Parent>, 2, False, +1.00, 4, 1, -*kStdGapCtlToViewH, AmountRight, True
       AutoLayout      =   AmountField, 3, TopLayoutGuide, 4, False, +1.00, 4, 1, *kStdControlGapV, , True
       BorderStyle     =   3
       ControlCount    =   0
@@ -87,10 +87,10 @@ Begin MobileScreen NewExpenseScreen
       AllowAutoCorrection=   False
       AllowSpellChecking=   False
       AutoCapitalizationType=   0
-      AutoLayout      =   DescriptionField, 1, <Parent>, 1, False, +1.00, 4, 1, *kStdGapCtlToViewH, , True
-      AutoLayout      =   DescriptionField, 2, <Parent>, 2, False, +1.00, 4, 1, -*kStdGapCtlToViewH, , True
-      AutoLayout      =   DescriptionField, 3, NameField, 4, False, +1.00, 4, 1, *kStdControlGapV, , True
       AutoLayout      =   DescriptionField, 8, , 0, False, +1.00, 4, 1, 59, , True
+      AutoLayout      =   DescriptionField, 1, <Parent>, 1, False, +1.00, 4, 1, *kStdGapCtlToViewH, DescriptionLeft, True
+      AutoLayout      =   DescriptionField, 2, <Parent>, 2, False, +1.00, 4, 1, -*kStdGapCtlToViewH, DescriptionRight, True
+      AutoLayout      =   DescriptionField, 3, NameField, 4, False, +1.00, 4, 1, *kStdControlGapV, , True
       BorderStyle     =   2
       ControlCount    =   0
       Enabled         =   True
@@ -120,10 +120,10 @@ Begin MobileScreen NewExpenseScreen
       AllowAutoCorrection=   False
       AllowSpellChecking=   False
       AutoCapitalizationType=   1
-      AutoLayout      =   NameField, 1, <Parent>, 1, False, +1.00, 4, 1, *kStdGapCtlToViewH, , True
-      AutoLayout      =   NameField, 2, <Parent>, 2, False, +1.00, 4, 1, -*kStdGapCtlToViewH, , True
-      AutoLayout      =   NameField, 3, AmountField, 4, False, +1.00, 4, 1, *kStdControlGapV, , True
       AutoLayout      =   NameField, 8, , 0, False, +1.00, 4, 1, 34, , True
+      AutoLayout      =   NameField, 1, <Parent>, 1, False, +1.00, 4, 1, *kStdGapCtlToViewH, NameLeft, True
+      AutoLayout      =   NameField, 2, <Parent>, 2, False, +1.00, 4, 1, -*kStdGapCtlToViewH, NameRight, True
+      AutoLayout      =   NameField, 3, AmountField, 4, False, +1.00, 4, 1, *kStdControlGapV, , True
       BorderStyle     =   3
       ControlCount    =   0
       Enabled         =   True
@@ -223,6 +223,75 @@ End
 
 #tag EndWindowCode
 
+#tag Events AmountField
+	#tag Event
+		Sub Opening()
+		  var i as integer = iOSLayoutConstraint.StandardGap.Size
+		  
+		  var cs as new iOSLayoutConstraint(me, _
+		  iOSLayoutConstraint.AttributeTypes.LeftMargin, _
+		  iOSLayoutConstraint.RelationTypes.Equal, _
+		  self, iOSLayoutConstraint.AttributeTypes.LeftMargin, 1.0, i, 1000)
+		  
+		  var cs2 as new iOSLayoutConstraint(me, _
+		  iOSLayoutConstraint.AttributeTypes.RightMargin, _
+		  iOSLayoutConstraint.RelationTypes.Equal, _
+		  self, iOSLayoutConstraint.AttributeTypes.RightMargin, 1.0, -i, 1000)
+		  
+		  self.Constraint("AmountLeft").Active = false
+		  self.Constraint("AmountRight").Active = false
+		  
+		  self.AddConstraint cs
+		  self.AddConstraint cs2
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events DescriptionField
+	#tag Event
+		Sub Opening()
+		  var i as integer = iOSLayoutConstraint.StandardGap.Size
+		  
+		  var cs as new iOSLayoutConstraint(me, _
+		  iOSLayoutConstraint.AttributeTypes.LeftMargin, _
+		  iOSLayoutConstraint.RelationTypes.Equal, _
+		  self, iOSLayoutConstraint.AttributeTypes.LeftMargin, 1.0, i, 1000)
+		  
+		  var cs2 as new iOSLayoutConstraint(me, _
+		  iOSLayoutConstraint.AttributeTypes.RightMargin, _
+		  iOSLayoutConstraint.RelationTypes.Equal, _
+		  self, iOSLayoutConstraint.AttributeTypes.RightMargin, 1.0, -i, 1000)
+		  
+		  self.Constraint("DescriptionLeft").Active = false
+		  self.Constraint("DescriptionRight").Active = false
+		  
+		  self.AddConstraint cs
+		  self.AddConstraint cs2
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events NameField
+	#tag Event
+		Sub Opening()
+		  var i as integer = iOSLayoutConstraint.StandardGap.Size
+		  
+		  var cs as new iOSLayoutConstraint(me, _
+		  iOSLayoutConstraint.AttributeTypes.LeftMargin, _
+		  iOSLayoutConstraint.RelationTypes.Equal, _
+		  self, iOSLayoutConstraint.AttributeTypes.LeftMargin, 1.0, i, 1000)
+		  
+		  var cs2 as new iOSLayoutConstraint(me, _
+		  iOSLayoutConstraint.AttributeTypes.RightMargin, _
+		  iOSLayoutConstraint.RelationTypes.Equal, _
+		  self, iOSLayoutConstraint.AttributeTypes.RightMargin, 1.0, -i, 1000)
+		  
+		  self.Constraint("NameLeft").Active = false
+		  self.Constraint("NameRight").Active = false
+		  
+		  self.AddConstraint cs
+		  self.AddConstraint cs2
+		End Sub
+	#tag EndEvent
+#tag EndEvents
 #tag ViewBehavior
 	#tag ViewProperty
 		Name="Index"

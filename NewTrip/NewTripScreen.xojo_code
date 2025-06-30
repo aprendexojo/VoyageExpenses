@@ -18,8 +18,8 @@ Begin MobileScreen NewTripScreen
       AccessibilityHint=   ""
       AccessibilityLabel=   ""
       AutoLayout      =   AddTripC, 4, BottomLayoutGuide, 3, False, +1.00, 4, 1, -*kStdControlGapV, , True
-      AutoLayout      =   AddTripC, 1, <Parent>, 1, False, +1.00, 4, 1, 0, , True
-      AutoLayout      =   AddTripC, 2, <Parent>, 2, False, +1.00, 4, 1, 0, , True
+      AutoLayout      =   AddTripC, 1, <Parent>, 1, False, +1.00, 4, 1, 0, TripLeft, True
+      AutoLayout      =   AddTripC, 2, <Parent>, 2, False, +1.00, 4, 1, 0, TripRight, True
       AutoLayout      =   AddTripC, 3, TopLayoutGuide, 4, False, +1.00, 4, 1, 0, , True
       ControlCount    =   0
       Enabled         =   True
@@ -88,6 +88,27 @@ End
 	#tag Event
 		Sub SelectionChanged(section as integer, row as integer)
 		  self.RightNavigationToolbar.ButtonAt(0).Enabled = row <> -1
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub Opening()
+		  var i as integer = iOSLayoutConstraint.StandardGap.Size
+		  
+		  var cs as new iOSLayoutConstraint(me, _
+		  iOSLayoutConstraint.AttributeTypes.LeftMargin, _
+		  iOSLayoutConstraint.RelationTypes.Equal, _
+		  self, iOSLayoutConstraint.AttributeTypes.LeftMargin, 1.0, i, 1000)
+		  
+		  var cs2 as new iOSLayoutConstraint(me, _
+		  iOSLayoutConstraint.AttributeTypes.RightMargin, _
+		  iOSLayoutConstraint.RelationTypes.Equal, _
+		  self, iOSLayoutConstraint.AttributeTypes.RightMargin, 1.0, -i, 1000)
+		  
+		  self.Constraint("TripLeft").Active = false
+		  self.Constraint("TripRight").Active = false
+		  
+		  self.AddConstraint cs
+		  self.AddConstraint cs2
 		End Sub
 	#tag EndEvent
 #tag EndEvents

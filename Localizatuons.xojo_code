@@ -11,6 +11,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"New Trip"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Nuevo Viaje"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Nouveau Voyage"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Neue Reise"
 	#tag EndConstant
 
 	#tag Constant, Name = kAmount, Type = String, Dynamic = True, Default = \"Amount", Scope = Public
@@ -18,6 +19,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Amount"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Cantidad"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Montant"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"F\xC3\xA4lliger Betrag"
 	#tag EndConstant
 
 	#tag Constant, Name = kAmountOrCategoryNotSet, Type = String, Dynamic = True, Default = \"Amount or Category has not been set for the expense", Scope = Public
@@ -25,6 +27,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Amount or Category has not been set for the expense"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Cantidad o Categor\xC3\xADa no definida para el gasto"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Montant ou cat\xC3\xA9gorie non d\xC3\xA9fini pour la d\xC3\xA9pense"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"F\xC3\xBCr die Ausgabe wurde kein Betrag oder keine Kategorie festgelegt"
 	#tag EndConstant
 
 	#tag Constant, Name = kBudget, Type = String, Dynamic = True, Default = \"Budget", Scope = Public
@@ -32,6 +35,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Budget"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Presupuesto"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Budget"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Budget"
 	#tag EndConstant
 
 	#tag Constant, Name = kBudgetVsCurrentExpenses, Type = String, Dynamic = True, Default = \"Budget vs. Current Expenses", Scope = Public
@@ -39,6 +43,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Budget vs. Current Expenses"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Presupuesto vs. Gastos Actuales"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Budget vs. D\xC3\xA9penses Courantes"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Budget vs. laufende Ausgaben"
 	#tag EndConstant
 
 	#tag Constant, Name = kCancel, Type = String, Dynamic = True, Default = \"Cancel", Scope = Public
@@ -46,6 +51,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Cancel"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Cancelar"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Annuler"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Stornieren"
 	#tag EndConstant
 
 	#tag Constant, Name = kCategories, Type = String, Dynamic = True, Default = \"Categories", Scope = Public
@@ -53,6 +59,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Categories"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Categor\xC3\xADas"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Cat\xC3\xA9gories"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Kategorien"
 	#tag EndConstant
 
 	#tag Constant, Name = kCategory, Type = String, Dynamic = True, Default = \"Category", Scope = Public
@@ -60,6 +67,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Category"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Categor\xC3\xADa"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Cat\xC3\xA9gorie"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Kategorie"
 	#tag EndConstant
 
 	#tag Constant, Name = kChangeCategoryName, Type = String, Dynamic = True, Default = \"Change Category Name", Scope = Public
@@ -67,6 +75,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Change Category Name"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Cambiar Nombre de Categor\xC3\xADa"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Changer le Nom de la Cat\xC3\xA9gorie"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Kategorienamen \xC3\xA4ndern"
 	#tag EndConstant
 
 	#tag Constant, Name = kChangeThePlaceName, Type = String, Dynamic = True, Default = \"Change the Place Name", Scope = Public
@@ -74,6 +83,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Change the Place Name"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Cambia el Nombre del Lugar"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Changer le Nom du Lieu"
+		#Tag Instance, Platform = Any, Language = Default, Definition  = \"\xC3\x84ndern des Ortsnamens"
 	#tag EndConstant
 
 	#tag Constant, Name = kCloseCurrentTrip, Type = String, Dynamic = True, Default = \"Close Current Trip", Scope = Public
@@ -81,6 +91,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Close Current Trip"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Finalizar Viaje en Curso"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Fin du Voyage en Cours"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Aktuelle Reise schlie\xC3\x9Fen"
 	#tag EndConstant
 
 	#tag Constant, Name = kCloseTrip, Type = String, Dynamic = True, Default = \"Close Trip", Scope = Public
@@ -88,6 +99,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Close Trip"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Finalizar Viaje"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Fin du Voyage"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Reise beenden"
 	#tag EndConstant
 
 	#tag Constant, Name = kCurrentCategory, Type = String, Dynamic = True, Default = \"Current Category: ", Scope = Public
@@ -95,6 +107,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Current Category: "
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Categor\xC3\xADa Actual: "
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Cat\xC3\xA9gorie actuelle: "
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Aktuelle Kategorie: "
 	#tag EndConstant
 
 	#tag Constant, Name = kCurrentTrip, Type = String, Dynamic = True, Default = \"Current Trip", Scope = Public
@@ -102,6 +115,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Current Trip"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Viaje en Curso"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Voyage en Cours"
+		#Tag Instance, Platform = Any, Language = Default, Definition  = \"Aktuelle Reise: "
 	#tag EndConstant
 
 	#tag Constant, Name = kDelete, Type = String, Dynamic = True, Default = \"Delete", Scope = Public
@@ -109,6 +123,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Delete"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Borrar"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Supprimer"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"L\xC3\xB6schen"
 	#tag EndConstant
 
 	#tag Constant, Name = kDescriptionForTheExpense, Type = String, Dynamic = True, Default = \"Description for the expense.", Scope = Public
@@ -116,6 +131,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Description for the expense."
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Descripci\xC3\xB3n del gasto."
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Description de la d\xC3\xA9pense."
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Beschreibung der Ausgabe."
 	#tag EndConstant
 
 	#tag Constant, Name = kDescriptionForTheLeisureTrip, Type = String, Dynamic = True, Default = \"Description for the Leisure Trip.", Scope = Public
@@ -123,6 +139,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Description for the Leisure Trip."
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Descripci\xC3\xB3n del Viaje de Ocio."
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Description du Voyage de Loisirs."
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Beschreibung f\xC3\xBCr die Urlaubsreise."
 	#tag EndConstant
 
 	#tag Constant, Name = kDescriptionForTheWorkTrip, Type = String, Dynamic = True, Default = \"Description for the Work Trip.", Scope = Public
@@ -130,6 +147,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Description for the Work Trip."
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Descripci\xC3\xB3n del Viaje de Trabajo."
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Description du Voyage d\xE2\x80\x99affaires."
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Beschreibung f\xC3\xBCr die Dienstreise."
 	#tag EndConstant
 
 	#tag Constant, Name = kDoYouWantToCloseTheCurrentTrip, Type = String, Dynamic = True, Default = \"Do you want to close the current Trip\?", Scope = Public
@@ -137,6 +155,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Do you want to close the current Trip\?"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"\xC2\xBFQuiere finalizar el Viaje en curso\?"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Voulez-vous mettre fin au Voyage en cours \?"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"M\xC3\xB6chten Sie die aktuelle Reise beenden\?"
 	#tag EndConstant
 
 	#tag Constant, Name = KDuplicate, Type = String, Dynamic = True, Default = \"Duplicate", Scope = Public
@@ -144,6 +163,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Duplicate"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Duplicar"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Double"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Duplikat"
 	#tag EndConstant
 
 	#tag Constant, Name = kExpenseDetail, Type = String, Dynamic = True, Default = \"Expense Detail", Scope = Public
@@ -151,6 +171,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Expense Detail"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Detalle del Gasto"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"D\xC3\xA9tails des d\xC3\xA9penses"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Kostendetails"
 	#tag EndConstant
 
 	#tag Constant, Name = kHome, Type = String, Dynamic = True, Default = \"Home", Scope = Public
@@ -158,6 +179,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Inicio"
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Home"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Initiale"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Start"
 	#tag EndConstant
 
 	#tag Constant, Name = kMore, Type = String, Dynamic = True, Default = \"More", Scope = Public
@@ -165,6 +187,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"More"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"M\xC3\xA1s"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Plus"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Mehr"
 	#tag EndConstant
 
 	#tag Constant, Name = kName, Type = String, Dynamic = True, Default = \"Name", Scope = Public
@@ -172,6 +195,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Name"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Nombre"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Nom"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Name"
 	#tag EndConstant
 
 	#tag Constant, Name = kNewCategory, Type = String, Dynamic = True, Default = \"New Category", Scope = Public
@@ -179,6 +203,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"New Category"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Nueva Categor\xC3\xADa"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Nouvelle Cat\xC3\xA9gorie"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Neue Kategorie"
 	#tag EndConstant
 
 	#tag Constant, Name = kNewCategoryName, Type = String, Dynamic = True, Default = \"New Category Name", Scope = Public
@@ -186,6 +211,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"New Category Name"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Nombre de Nueva Categor\xC3\xADa"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Nouveau Nom de Cat\xC3\xA9gorie"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Neuer Kategoriename"
 	#tag EndConstant
 
 	#tag Constant, Name = kNewExpense, Type = String, Dynamic = True, Default = \"New Expense", Scope = Public
@@ -193,6 +219,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"New Expense"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Nuevo Gasto"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Nouvelle D\xC3\xA9pense"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Neue Kosten"
 	#tag EndConstant
 
 	#tag Constant, Name = kNewPlace, Type = String, Dynamic = True, Default = \"New Place", Scope = Public
@@ -200,6 +227,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"New Place"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Nuevo Lugar"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Nouveau Lieu"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Neuer Ort"
 	#tag EndConstant
 
 	#tag Constant, Name = kNewPlaceName, Type = String, Dynamic = True, Default = \"New Place Name", Scope = Public
@@ -207,6 +235,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"New Place Name"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Nombre del Nuevo Lugar"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Nouveau Nom de Lieu"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Neuer Standortname"
 	#tag EndConstant
 
 	#tag Constant, Name = kNewTrip, Type = String, Dynamic = True, Default = \"New Trip", Scope = Public
@@ -214,6 +243,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"New Trip"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Nuevo Viaje"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Nouveau Voyage"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Neue Reise"
 	#tag EndConstant
 
 	#tag Constant, Name = kNoTripAvailable, Type = String, Dynamic = True, Default = \"No Current Trip", Scope = Public
@@ -221,6 +251,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"No Current Trip"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Sin Viaje en Curso"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Aucun en Cours"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Keine aktuelle Reise"
 	#tag EndConstant
 
 	#tag Constant, Name = kPlace, Type = String, Dynamic = True, Default = \"Place", Scope = Public
@@ -228,6 +259,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Place"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Lugar"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Lieu"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Ort"
 	#tag EndConstant
 
 	#tag Constant, Name = kPlaces, Type = String, Dynamic = True, Default = \"Places", Scope = Public
@@ -235,6 +267,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Places"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Lugares"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Lieux"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Orte"
 	#tag EndConstant
 
 	#tag Constant, Name = kSave, Type = String, Dynamic = True, Default = \"Save", Scope = Public
@@ -242,6 +275,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Save"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Guardar"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Sauvegarder"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Speichern"
 	#tag EndConstant
 
 	#tag Constant, Name = kStats, Type = String, Dynamic = True, Default = \"Stats", Scope = Public
@@ -249,6 +283,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Stats"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Estad\xC3\xADsticas"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Statistiques"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Statistiken"
 	#tag EndConstant
 
 	#tag Constant, Name = kTotal, Type = String, Dynamic = True, Default = \"Total", Scope = Public
@@ -256,6 +291,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Total"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Total"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Total"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Gesamt"
 	#tag EndConstant
 
 	#tag Constant, Name = kTotalExpenses, Type = String, Dynamic = True, Default = \"Total Expenses: ", Scope = Public
@@ -263,6 +299,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Total Expenses: "
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Total Gastos: "
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"D\xC3\xA9penses Totales: "
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Gesamtausgaben: "
 	#tag EndConstant
 
 	#tag Constant, Name = kTripExpenses, Type = String, Dynamic = True, Default = \"Trip Expenses", Scope = Public
@@ -270,6 +307,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Trip Expenses"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Gastos del Viaje"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Frais de Voyage"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Reisekosten"
 	#tag EndConstant
 
 	#tag Constant, Name = kTripLocations, Type = String, Dynamic = True, Default = \"Trip Locations", Scope = Public
@@ -277,6 +315,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Trip Locations"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Ubicaciones del Viaje"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Lieux du Voyage"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Reiseziele"
 	#tag EndConstant
 
 	#tag Constant, Name = kTrips, Type = String, Dynamic = True, Default = \"Trips", Scope = Public
@@ -284,6 +323,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Trips"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Viajes"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Voyages"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Reisen"
 	#tag EndConstant
 
 	#tag Constant, Name = kTypeTheNameOfTheNewCategory, Type = String, Dynamic = True, Default = \"Type the name of the new Category", Scope = Public
@@ -291,6 +331,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Type the name of the new Category"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Nombre de la nueva Categor\xC3\xADa"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Nom de la Nouvelle Cat\xC3\xA9gorie"
+		#Tag Instance, Platform = Any, Language = de, Definition  = \"Geben Sie den Namen der neuen Kategorie ein"
 	#tag EndConstant
 
 	#tag Constant, Name = kTypeTheNameOfTheNewPlace, Type = String, Dynamic = True, Default = \"Type the name of the new Place", Scope = Public
@@ -298,6 +339,7 @@ Protected Module Localizatuons
 		#Tag Instance, Platform = Any, Language = en, Definition  = \"Type the name of the new Place"
 		#Tag Instance, Platform = Any, Language = es, Definition  = \"Nombre del nuevo Lugar"
 		#Tag Instance, Platform = Any, Language = fr, Definition  = \"Nom du Nouveau Lieu"
+		#Tag Instance, Platform = Any, Language = Default, Definition  = \"Geben Sie den Namen des neuen Ortes ein"
 	#tag EndConstant
 
 
